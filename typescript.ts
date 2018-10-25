@@ -84,3 +84,25 @@ let car = {} as Car; // Type assertion
 interface Dog {
   type?: string // type is optional
 }
+
+
+// Class
+
+class Animal {
+  sing: string = 'allalallal';
+  private name: string = 'a';
+
+  constructor(sound: string) {
+    this.sing = sound;
+  }
+
+  greet() {
+    return `Hello, ${this.sing}`;
+  }
+}
+
+const lion = new Animal("RAWR");
+
+console.log(lion.greet());
+
+// lion.name -> Name is private variable of the instance
