@@ -61,3 +61,26 @@ let returnFive = (): number => {
 let throwErrorFunction = (): never => {
   throw Error('Hello world');
 }
+
+// interface
+
+interface Car {
+  brand: string,
+  isNew: boolean
+}
+
+let cars = (cars: Car) => {
+  console.log('hi');
+}
+
+let cars2 = (cars: { brand: string, isNew: boolean }) => {
+  console.log('hi2');
+}
+
+
+let car = {} as Car; // Type assertion
+
+
+interface Dog {
+  type?: string // type is optional
+}
